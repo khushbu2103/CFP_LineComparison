@@ -32,10 +32,16 @@ public class LineComparison {
         float lineLength2 = (float) Math.sqrt(Math.pow(Bx1-Bx2, 2)+ Math.pow(By1-By2, 2));
         System.out.println("Length of line2 : " + lineLength2);
 
-        if (lineLength1 == lineLength2)
-            System.out.println("Line1 is equals to line2");
+        String lengthOfLine1 = Float.toString(lineLength1);
+        String lengthOfLine2 = Float.toString(lineLength2);
+
+        if(lengthOfLine1.compareTo(lengthOfLine2) == 0)
+            System.out.println("Length of line 1 and length of line 2 is equal");
+        else if(lengthOfLine1.compareTo(lengthOfLine2) > 0)
+            System.out.println("Length of line1 is greater");
         else
-            System.out.println("Line1 is not equals to line2");
+            System.out.println("Length of line1 is smaller");
+
 
     }
 }
